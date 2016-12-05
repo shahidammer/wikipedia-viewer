@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    background-color:#092b40
+}
+#randomButton a {
+    padding: 5px;
+    color: white;
+    font-size: 18px;
+    border: 2px solid white;
+    text-decoration: none;
+}
+#randomButton, #InputForm {
+    margin-top: 30px;
+}
+#header {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+#list {
+  margin: 30px 100px 0 100px;
+  background-color: white;
+  padding: 10px;
+}
+a.action_link {
+text-decoration: none;
+color:black;
+}
+/* mouse over link */
+a:hover {
+    color: #f76;
+}
+#LoadingBar {
+  font-size: 24px;
+  color: white;
+  margin: 100px;
+}
