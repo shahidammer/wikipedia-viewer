@@ -5,6 +5,7 @@ import 'react-loading-bar/dist/index.css'
 import ListItems from './ListItems'
 
 const List = (props) => {
+  console.log(props)
   if (props.isFetching === true) {
     return (
       <div id= 'LoadingBar'>
@@ -14,7 +15,10 @@ const List = (props) => {
   )
   } else {
     if (props.isTitleSearchable === false) {
-      window.alert('Unable to Search it')
+      return <div className='alert alert-danger' role='alert'>
+        Unable to retrieve your search
+      </div>
+      // window.alert('Unable to Search it')
     }
     return (
       <div >

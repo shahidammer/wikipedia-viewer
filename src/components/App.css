@@ -12,10 +12,14 @@ body {
 #randomButton, #InputForm {
     margin-top: 30px;
 }
+#randomButton a:hover {
+    color: #f76;
+}
 #header {
-    color: white;
+    color:#092b40 ;
     font-size: 20px;
     font-weight: bold;
+    background: white;
 }
 #list {
   margin: 30px 100px 0 100px;
@@ -27,11 +31,38 @@ text-decoration: none;
 color:black;
 }
 /* mouse over link */
-a:hover {
+a.action_link:hover {
     color: #f76;
 }
 #LoadingBar {
   font-size: 24px;
   color: white;
   margin: 100px;
+}
+.MainDiv{
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+}
+.alert.alert-danger{
+  margin-top: 100px;
+  width: 50%;
+  margin-left: 25%;
+}
+#SearchDiv {
+  margin-top: 25px;
+}
+#SearchBtn {
+  text-decoration: none;
+color: white;
+}
+#SearchBtn:hover {
+    color: #f76;
+}
+.glyphicon.glyphicon-search{
+  font-size: 50px;
 }

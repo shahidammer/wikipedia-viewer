@@ -1,3 +1,6 @@
+import { combineReducers } from 'redux'
+import { routerReducer } from 'react-router-redux'
+
 const defaults = {
   isFetching: false,
   isTitleSearchable: true,
@@ -25,5 +28,8 @@ const reducer = (state = defaults, action) => {
       return state
   }
 }
-
-export default reducer
+const rootReducer = combineReducers({
+  reducer,
+  routing: routerReducer
+})
+export default rootReducer

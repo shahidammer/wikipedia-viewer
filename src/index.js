@@ -1,18 +1,23 @@
 import React from 'react'
 import {render} from 'react-dom'
+import Main from './components/Main'
 import App from './components/App'
-import { createStore, applyMiddleware } from 'redux'
+import Index from './components/Index'
+import { Router, Route, IndexRoute } from 'react-router'
+
 import { Provider } from 'react-redux'
-import reducer from './Reducer'
-import promise from 'redux-promise-middleware'
-import thunk from 'redux-thunk'
-
-const middleware = applyMiddleware(promise(), thunk)
-const store = createStore(reducer, middleware)
-
-render(
+import store, { history } from './store'
+const router = (
   <Provider store={store}>
-    <App />
-  </Provider>,
+    <Router history = {history}>
+      <Route path='/' component={Index}>
+        <IndexRoute component={Main} />
+        <Route path='/List' component={App} />
+      </Route>
+    </Router>
+  </Provider>
+)
+render(
+  router,
   document.getElementById('root')
 )
